@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billboard Slideshow</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .billboard {
+      position: relative;
+      width: 300px;
+      height: 500px;
+      background: url('https://via.placeholder.com/300x500/000000/ffffff?text=Billboard+Mockup') no-repeat center center;
+      background-size: cover;
+      border: 10px solid #333;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .slideshow {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      height: 80%;
+      overflow: hidden;
+      border-radius: 5px;
+    }
+
+    .slides {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      animation: slide 10s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="billboard">
+  <div class="slideshow">
+    <div class="slides">
+      <img src="https://via.placeholder.com/240x400/FF5733/ffffff?text=Slide+1" alt="Slide 1">
+      <img src="https://via.placeholder.com/240x400/33FF57/ffffff?text=Slide+2" alt="Slide 2">
+      <img src="https://via.placeholder.com/240x400/3357FF/ffffff?text=Slide+3" alt="Slide 3">
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
